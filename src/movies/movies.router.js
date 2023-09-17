@@ -8,5 +8,9 @@ router
 	.route("/:movieId([0-9]+)/theaters")
 	.get(controller.readTheaters)
 	.all(methodNotAllowed);
+router
+	.route("/:movieId([0-9]+)/reviews")
+	.get(controller.readReviews)
+	.all(methodNotAllowed);
 
 module.exports = router;
