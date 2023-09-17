@@ -1,5 +1,5 @@
 const knex = require("../db/connection");
-const mapProperties = require("../utils/map-properties");
+const addCriticKey = require("../utils/addCriticKey");
 
 // GET /movies
 function list() {
@@ -29,15 +29,6 @@ function readTheaters(movieId) {
 }
 
 // GET /movies/:movieId/reviews
-const addCriticKey = mapProperties({
-	c_critic_id: "critic.critic_id",
-	preferred_name: "critic.preferred_name",
-	surname: "critic.surname",
-	organization_name: "critic.organization_name",
-	c_created_at: "critic.created_at",
-	c_updated_at: "critic.updated_at",
-});
-
 function readReviews(movieId) {
 	return knex("reviews as r")
 		.join("critics as c", "r.critic_id", "c.critic_id")
