@@ -3,16 +3,19 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
+const moviesRouter = require("./movies/movies.router");
+
 const notFound = require("./errors/notFound");
 const errorHandler = require("./errors/errorHandler");
 
 app.use(cors());
 app.use(express.json());
 
-// Not found handler
-app.use(notFound);
+// Routers
+app.use("/movies", moviesRouter);
 
-// Error handler
+// Handlers
+app.use(notFound);
 app.use(errorHandler);
 
 module.exports = app;
