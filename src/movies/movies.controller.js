@@ -27,7 +27,16 @@ function read(req, res) {
 	res.json({ data });
 }
 
+// GET /movies/:movieId/theaters
+async function readTheaters(req, res) {
+	res.json({ data: await service.readTheaters(req.params.movieId) });
+}
+
 module.exports = {
 	list: asyncErrorBoundary(list),
 	read: [asyncErrorBoundary(movieExists), read],
+	readTheaters: [
+		asyncErrorBoundary(movieExists),
+		asyncErrorBoundary(readTheaters),
+	],
 };
