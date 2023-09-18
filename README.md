@@ -1,5 +1,16 @@
 # WeLoveMovies
-<personal overview>
+For this project, I used Node.js with Express, Knex, and PostgreSQL to create the backend of the WeLoveMovies app. My work included:
+- Building an API following RESTful design principles
+- Writing database migrations using Knex's migration tool
+- Creating CRUD routes in an Express server
+- Returning joined and nested data with Knex
+- Accessing relevant information through route and query parameters
+- Writing custom validation middleware functions
+- Creating not-found and error handlers
+- Using the cors package so that requests from the frontend can correctly reach the backend
+
+#### [Deployed App](https://welovemovies-frontend-c9xu.onrender.com) (with provided [frontend](https://github.com/ariesgrey/welovemovies-frontend))
+#### [Deployed Backend](https://welovemovies-backend-2slh.onrender.com)
 
 # Provided Thinkful Instructions
 You are tasked with both setting up the database and building a number of routes that will be used by the frontend application. For this project, you will start by making the necessary changes to the data tier and then proceed to make changes to the application tier following an inside-out development workflow. Each table is detailed below, as is each route.
