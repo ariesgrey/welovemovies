@@ -15,8 +15,6 @@ For this project, I used Node.js with Express, Knex, and PostgreSQL to create th
 # Provided Thinkful Instructions
 You are tasked with both setting up the database and building a number of routes that will be used by the frontend application. For this project, you will start by making the necessary changes to the data tier and then proceed to make changes to the application tier following an inside-out development workflow. Each table is detailed below, as is each route.
 
-#### Provided frontend for the app [here](https://github.com/ariesgrey/welovemovies-frontend).
-
 ## Database Tables
 You will create five tables for this project. You will need to create migrations for each of these tables and run those migrations. Seed data is included in this project in the `./src/db/seeds` folder. The seeds will run correctly if and only if the tables are setup as described.
 
