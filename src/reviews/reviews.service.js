@@ -32,8 +32,14 @@ function updatedRead(reviewId) {
 		.then(addCriticKey);
 }
 
+// DELETE /reviews/:reviewId
+function destroy(reviewId) {
+	return knex("reviews").where({ review_id: reviewId }).del();
+}
+
 module.exports = {
 	read,
 	update,
 	updatedRead,
+	destroy,
 };
